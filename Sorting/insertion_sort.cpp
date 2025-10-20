@@ -29,6 +29,22 @@ void insertion_sort_ptr(int* arr, int n){
     }
 }
 
+// Recursive Implementation of insertion sort.
+void insertion_sort_recursive(int arr[], int n, int i = 1){
+    if(i >= n){
+        return;
+    } else {
+        for(int j = i; j > 0; j--){
+            if(*(arr + j) < *(arr + j - 1)){
+                int temp = *(arr + j);
+                *(arr + j) = *(arr + j - 1);
+                *(arr + j - 1) = temp;
+            }
+        }
+        insertion_sort_recursive(arr, n, i + 1);
+    }
+}
+
 
 
 
@@ -36,7 +52,7 @@ int main(){
     int num[] = {13,46,24,52,20,9};
     int n = sizeof(num) / sizeof(num[0]);
 
-    insertion_sort_ptr(num,n);
+    insertion_sort_recursive(num,n);
     for(int i = 0; i < n; i++){
         cout << num[i] << endl;
     }
