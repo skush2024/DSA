@@ -1,0 +1,13 @@
+# Ignoring all the executables
+*.exe
+*.out
+*.o
+*.obj
+*.class
+
+# Ignoring build folders if any
+/build/
+bin/
+./Sorting/select_sort
+.DS_Store
+.vscode/
