@@ -30,13 +30,29 @@ void bubble_sort_ptr(int* arr, int n){
 }
 
 
-
+// Recursive Implementation
+void bubble_sort_recursive(int arr[], int n){    
+    if ( n < 1){
+        int x = 0;
+    } else {
+        int i = 0;
+        while (i < n - 1){ 
+            if(*(arr + i) > *(arr + i + 1)){
+                int temp = *(arr + i);
+                *(arr + i) = *(arr + i + 1);
+                *(arr + i + 1) = temp;
+            }
+            i++;
+        }
+        bubble_sort_recursive(arr, n - 1);
+    }
+}
 
 int main(){
     int num[] = {13,24,46,20,9,52};
     int n = sizeof(num) / sizeof(num[0]);
 
-    bubble_sort_ptr(num, n);
+    bubble_sort_recursive(num, n);
 
     for(int i = 0; i < n; i++){
         cout << num[i] << endl;
