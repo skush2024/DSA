@@ -33,7 +33,7 @@ void bubble_sort_ptr(int* arr, int n){
 // Recursive Implementation
 void bubble_sort_recursive(int arr[], int n){    
     if ( n < 1){
-        int x = 0;
+        return;
     } else {
         int i = 0;
         while (i < n - 1){ 
