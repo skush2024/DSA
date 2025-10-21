@@ -47,7 +47,6 @@ void insertion_sort_recursive(int arr[], int n, int i = 1){
 
 
 
-
 int main(){
     int num[] = {13,46,24,52,20,9};
     int n = sizeof(num) / sizeof(num[0]);
